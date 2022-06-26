@@ -7,7 +7,6 @@ import NewsPageDiv from './styled';
 let PageSize = 6;
 
 const NewsPage = ({ data }) => {
-    console.log(data.length);
 
     const [currentPage, setCurrentPage] = useState(1);
 

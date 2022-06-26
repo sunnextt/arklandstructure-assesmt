@@ -23,7 +23,6 @@ const HomePage = () => {
         <Layout>
             <Header>Latest news</Header>
             <Divivder />
-            <div>Hello World!</div>
             {data.length && <NewsPage data={data} />}
         </Layout>
     );
