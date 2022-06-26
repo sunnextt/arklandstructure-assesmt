@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'https://stage.api.sloovi.com/'
+    baseURL: 'https://newsapi.org/v2'
 });
 
 export default instance;

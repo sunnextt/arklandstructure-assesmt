@@ -4,7 +4,8 @@ import { ThemeProvider } from 'styled-components';
 import 'antd/dist/antd.css';
 import './App.css';
 import GlobalStyled from './GlobalStyled';
-import NewsPage from './pages';
+import HomePage from './pages';
+import RedirectPage from './pages/RedirectPage';
 
 const theme = {
     color: '#FFFFFF'
@@ -15,7 +16,8 @@ function App() {
         <ThemeProvider theme={theme}>
             <GlobalStyled />
             <Routes>
-                <Route path="/" element={<NewsPage />} />
+                <Route path="/" element={<HomePage />} />
+                <Route exact path="/external-link" element={<RedirectPage />} />
             </Routes>
         </ThemeProvider>
     );

@@ -2,20 +2,53 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 body {
-  background-color: #c8d8e4;
+  background-color: #F5F5F5;
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
-  color: #2b3e51;
+  font-family: 'Roboto';
+  color: #FFFFFF;
 }
 
-h2 {
-  font-weight: 300;
-  text-align: center;
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+h5 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+h6 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 p {
-  position: relative;
-}
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 
 a,
 a:link,

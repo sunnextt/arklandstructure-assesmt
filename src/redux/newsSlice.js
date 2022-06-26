@@ -1,11 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import userService from '../services/userService';
+import newsService from '../services/newsService';
 
 export const getAllTasks = createAsyncThunk(
     'users/tasks',
-    async ({ company_id }, { rejectWithValue }) => {
+    async ({ id }, { rejectWithValue }) => {
         try {
-            const response = await userService.getAllTasks(company_id);
+            const response = await newsService.getAllTasks();
             return response;
         } catch (err) {
             let error = err; // cast the error for access
@@ -18,17 +18,17 @@ export const getAllTasks = createAsyncThunk(
 );
 
 const initialState = {
-    tasks: {},
+    news: {},
     error: null
 };
 
-const createApplicationSlice = createSlice({
+const newsSlice = createSlice({
     name: 'Application',
     initialState: initialState,
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(getAllTasks.fulfilled, (state, { payload }) => {
-            state.tasks = payload;
+            state.news = payload;
         });
         builder.addCase(getAllTasks.rejected, (state, action) => {
             if (action.payload) {
@@ -40,6 +40,6 @@ const createApplicationSlice = createSlice({
     }
 });
 
-const { reducer } = createApplicationSlice;
+const { reducer } = newsSlice;
 
 export default reducer;
