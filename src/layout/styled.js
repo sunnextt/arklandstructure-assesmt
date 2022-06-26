@@ -3,8 +3,6 @@ import styled from 'styled-components';
 const LayoutContainer = styled.main``;
 
 export const Wrapper = styled.div`
-    @media (min-width: 700px) {
-    }
     display: flex;
     top: 64px;
     position: relative;
@@ -19,6 +17,12 @@ export const Main = styled.main`
     width: 100%;
     padding: 2.57rem 5.71rem;
     overflow-y: scroll;
+
+    @media (max-width: 900px) {
+        padding-left: 2rem ;
+        padding-right: 2rem ;
+
+    }
 `;
 
 export const HeaderBar = styled.header`
