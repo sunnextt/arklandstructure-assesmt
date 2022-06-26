@@ -20,6 +20,7 @@ const HomePage = () => {
             })
             .catch((error) => {
                 if (error) {
+                    console.log(error);
                     console.log(error.message);
                     setError(
                         'Requests from the browser are not allowed on the Developer plan, except from localhost.'
