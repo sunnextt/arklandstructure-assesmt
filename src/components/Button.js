@@ -1,4 +1,4 @@
-import { Link as _Link, useLocation } from 'react-router-dom';
+import { Link as _Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const LinkDiv = styled(_Link)`
@@ -28,15 +28,8 @@ const LinkDiv = styled(_Link)`
 `;
 
 const LinkButton = ({ name, url }) => {
-    let location = useLocation();
-
-    console.log(url);
     return (
-        <LinkDiv
-            to="/external-link"
-            state={{ backgroundLocation: location }}
-            target="_blank"
-        >
+        <LinkDiv to="/external-link" state={{ url: url }}>
             {name}
         </LinkDiv>
     );

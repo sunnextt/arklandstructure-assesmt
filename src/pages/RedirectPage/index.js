@@ -1,18 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const RedirectPage = () => {
     const location = useLocation();
+    const { url } = location.state;
 
-    console.log(location);
+    const [timeLeft, setTimeLeft] = useState(5);
+
+    useEffect(() => {}, []);
 
     useEffect(() => {
-        // window.location.replace(state.url);
-    }, []);
+        if (timeLeft === 0) {
+            window.location.replace(url);
+        }
+        if (!timeLeft) return;
+        const intervalId = setInterval(() => {
+            setTimeLeft(timeLeft - 1);
+        }, 1000);
+
+        // clear interval on re-render to avoid memory leaks
+        return () => clearInterval(intervalId);
+    }, [timeLeft, url]);
+
 
     return (
         <div>
-            <h3 style={{ color: 'black' }}>Redirecting...</h3>
+            <h3 style={{ color: 'black' }}>
+                Redirecting after {timeLeft} seconds
+            </h3>
         </div>
     );
 };

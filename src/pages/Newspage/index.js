@@ -22,9 +22,15 @@ const NewsPage = ({ data }) => {
         <NewsPageDiv>
             <Row gutter={[24, 24]}>
                 {currentTableData.map(
-                    ({ description, publishedAt, url, title }) => {
+                    ({ description, publishedAt, url, title, urlToImage }) => {
                         return (
-                            <Col xs={24} sm={24} md={12} lg={8}>
+                            <Col
+                                xs={24}
+                                sm={24}
+                                md={12}
+                                lg={8}
+                                key={urlToImage}
+                            >
                                 <NewsCard
                                     url={url}
                                     content={description}
