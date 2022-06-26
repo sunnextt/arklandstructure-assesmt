@@ -3,11 +3,11 @@ import { useLocation } from 'react-router-dom';
 
 const RedirectPage = () => {
     const location = useLocation();
-    const { state } = location;
-    console.log(state);
+
+    console.log(location);
 
     useEffect(() => {
-        window.location.replace(state.url);
+        // window.location.replace(state.url);
     }, []);
 
     return (
