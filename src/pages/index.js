@@ -18,10 +18,10 @@ const HomePage = () => {
                     setData(articles);
                 }
             })
-            .catch((error) => {
-                if (error) {
-                    console.log(error);
-                    console.log(error.message);
+            .catch(({response}) => {
+                if (response.data) {
+                    console.log(response.data);
+                    console.log(response.data.message);
                     setError(
                         'Requests from the browser are not allowed on the Developer plan, except from localhost.'
                     );
