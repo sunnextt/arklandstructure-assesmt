@@ -19,9 +19,8 @@ export const Main = styled.main`
     overflow-y: scroll;
 
     @media (max-width: 900px) {
-        padding-left: 2rem ;
-        padding-right: 2rem ;
-
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 `;
 
