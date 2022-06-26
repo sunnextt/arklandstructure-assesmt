@@ -18,13 +18,9 @@ const HomePage = () => {
                     setData(articles);
                 }
             })
-            .catch(({response}) => {
+            .catch(({ response }) => {
                 if (response.data) {
-                    console.log(response.data);
-                    console.log(response.data.message);
-                    setError(
-                        'Requests from the browser are not allowed on the Developer plan, except from localhost.'
-                    );
+                    setError(response.data.message);
                 }
             });
     }, []);
