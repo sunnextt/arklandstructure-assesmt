@@ -33,6 +33,7 @@ const Time = styled.h6`
 
 const ContentDiv = styled.div`
     margin-bottom: 2rem;
+    height: 8.5em;
 `;
 const Bdiv = styled.div`
     display: flex;
@@ -47,7 +48,7 @@ export const NewsCard = ({ url, header, content, time }) => {
                 <p>{truncateSentence(content, 100)}</p>
             </ContentDiv>
             <Bdiv>
-                <LinkButton name="read more" url={url}/>
+                <LinkButton name="read more" url={url} />
                 <Bookmark>
                     <FaRegStar size="16" className="bs_icon" />
                     <h6>Add to bookmarks</h6>
