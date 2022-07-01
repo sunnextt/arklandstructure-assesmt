@@ -2,8 +2,8 @@ import { Card } from 'antd';
 import styled from 'styled-components';
 import { FaRegStar } from 'react-icons/fa';
 import LinkButton from '../Button';
-import moment from 'moment';
 import truncateSentence from '../../utils/truncate';
+import { MomentTimeFromNow } from '../../utils/formatTime';
 
 const Bookmark = styled.div`
     display: flex;
@@ -53,7 +53,7 @@ export const NewsCard = ({ url, header, content, time }) => {
                     <FaRegStar size="16" className="bs_icon" />
                     <h6>Add to bookmarks</h6>
                 </Bookmark>
-                <Time>{moment(time).startOf('hour').fromNow()}</Time>
+                <Time>{MomentTimeFromNow(time)}</Time>
             </Bdiv>
         </Card>
     );

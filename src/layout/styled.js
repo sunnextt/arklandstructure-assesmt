@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     height: calc(100% - 75px);
     width: 100%;
     flex: auto;
-    flex-direction: column;
+    flex-direction: column;e
 `;
 export const Main = styled.main`
     position: fixed;
