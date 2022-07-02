@@ -27,7 +27,7 @@ const LinkDiv = styled(_Link)`
     }
 `;
 
-const LinkButton = ({ name, url }) => {
+export const LinkButton = ({ name, url }) => {
     return (
         <LinkDiv to="/external-link" state={{ url: url }}>
             {name}
