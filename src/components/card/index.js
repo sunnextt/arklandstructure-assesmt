@@ -1,9 +1,9 @@
 import { Card } from 'antd';
 import styled from 'styled-components';
 import { FaRegStar } from 'react-icons/fa';
-import LinkButton from '../Button';
 import truncateSentence from '../../utils/truncate';
 import { MomentTimeFromNow } from '../../utils/formatTime';
+import LinkButton from '../button/Button';
 
 const Bookmark = styled.div`
     display: flex;
