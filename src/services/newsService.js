@@ -1,6 +1,6 @@
 import AslconstructionApi from './api';
 
-const todayDate = new Date().toISOString().slice(0, 10);
+export const todayDate = new Date().toISOString().slice(0, 10);
 
 const getAllNews = async (api_key) => {
     const response = await AslconstructionApi.get(
