@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import 'antd/dist/antd.css';
-import './App.css';
 import GlobalStyled from './GlobalStyled';
 import HomePage from './pages';
 import RedirectPage from './pages/RedirectPage';
