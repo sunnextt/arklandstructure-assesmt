@@ -7,7 +7,7 @@ import HomePage from './pages';
 import RedirectPage from './pages/RedirectPage';
 
 const theme = {
-    color: '#FFFFFF'
+    color: '#FFF'
 };
 
 function App() {
